@@ -1,17 +1,20 @@
 import Button from "../Button/Button";
 
-export default function PostCard() {
+export default function PostCard({ data }) {
     return (
         <div className="card col-6">
             <div className="card-img">
-                <img src="https://picsum.photos/600/400" alt="" />
+                <img src={data.image} alt="" />
             </div>
             <div className="card-body">
                 <div className="title">
-                    <span>Titolo del post</span>
+                    <span>{data.title}</span>
                 </div>
                 <div className="decription">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at. Doloribus possimus labore hic quisquam commodi nam asperiores dolores cumque, earum cupiditate fuga mollitia eum impedit omnis! Porro, placeat non.</p>
+                    <p>{data.content}</p>
+                </div>
+                <div className="tags">
+                    <p>{data.tags[0]} {data.tags[1]}</p>
                 </div>
                 <Button />
             </div>
