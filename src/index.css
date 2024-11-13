@@ -19,7 +19,7 @@ img {
 
 /* #region utilities */
 .container {
-    width: 80%;
+    width: 70%;
     max-width: 1200px;
     margin: auto;
 }
@@ -28,10 +28,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
 }
 
 .col-6 {
-    width: 50%;
+    width: calc(50% - 1rem);
 }
 
 /* #endregion utilities */
@@ -46,7 +47,7 @@ header {
 /* main */
 main {
     margin-top: 1rem;
-    height: calc(100vh - 128px);
+    margin-bottom: 4rem;
 
     .card {
         background-color: whitesmoke;
@@ -69,10 +70,17 @@ main {
                 margin-bottom: .5rem;
             }
 
-            .decription {
+            .decription,
+            .tags {
                 font-size: .85rem;
                 line-height: 1.2rem;
                 margin-bottom: .75rem;
+            }
+
+            .tags {
+                a {
+                    text-decoration: none;
+                }
             }
         }
     }

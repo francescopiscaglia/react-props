@@ -14,8 +14,9 @@ export default function PostCard({ data }) {
                     <p>{data.content}</p>
                 </div>
                 <div className="tags">
-                    <p>{data.tags[0]} {data.tags[1]}</p>
+                    <a href="#">{data.tags[0]} {data.tags[1]}</a>
                 </div>
+
                 <Button />
             </div>
         </div>
